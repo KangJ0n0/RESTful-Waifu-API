@@ -11,14 +11,11 @@ import (
 )
 
 func main() {
-    // Koneksi ke database MySQL
     db, err := db.ConnectDB()
     if err != nil {
         log.Fatal("Gagal terkoneksi ke database:", err)
     }
     defer db.Close()
-
-    // Membuat instance Echo
     e := echo.New()
 
     // Routing
