@@ -19,11 +19,11 @@ func main() {
     e := echo.New()
 
     // Routing
-    e.GET("/books", api.GetAllWaifus)
-    e.GET("/books/:id", api.GetWaifuByID)
-    e.POST("/books", api.CreateWaifu)
-    e.PUT("/books/:id", api.UpdateWaifu)
-    e.DELETE("/books/:id", api.DeleteWaifu)
+    e.GET("/waifus", api.GetAllWaifus)
+    e.GET("/waifus/:id", api.GetWaifuByID)
+    e.POST("/waifus", api.CreateWaifu)
+    e.PUT("/waifus/:id", api.UpdateWaifu)
+    e.DELETE("/waifus/:id", api.DeleteWaifu)
 
     // Menjalankan server
     e.Logger.Fatal(e.Start(":8080"))
